@@ -26,7 +26,7 @@ FoodCategory
 Recipe
    food_id:integer
    description:string
-   servings:strin
+   servings:string
    ingredients:string
    directions:string
 
