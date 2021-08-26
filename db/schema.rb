@@ -16,11 +16,8 @@ ActiveRecord::Schema.define(version: 2021_08_24_225758) do
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.string "cuisine"
-    t.string "diet"
-    t.string "intolerances"
-    t.string "excludeingredients"
+    t.string "meal"
+    t.string "exclude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
-  has_many :FoodCategories
-  has_many :Foods, through: :FoodCategories 
+  has_many :food_categories
+  has_many :foods, through: :food_categories, dependent: :destroy
 end

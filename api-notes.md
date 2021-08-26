@@ -24,8 +24,8 @@
    	 http.verify_mode = OpenSSL::SSL::VERIFY_NONE
    	 
    	 request = Net::HTTP::Get.new(url)
-   	 request["x-rapidapi-host"] = 'webknox-recipes.p.rapidapi.com'
-   	 request["x-rapidapi-key"] = 'aea69f05cemsh468b16ddc14e2b6p1d9bc7jsned15aa5946e3'
+   	 request["x-rapidapi-host"] = ''
+   	 request["x-rapidapi-key"] = ''
    	 
    	 response = http.request(request)
    	 puts response.read_body
@@ -68,8 +68,8 @@
     http.use_ssl = true
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     request = Net::HTTP::Get.new(url)
-    request["x-rapidapi-host"] = 'webknox-recipes.p.rapidapi.com'
-    request["x-rapidapi-key"] = 'aea69f05cemsh468b16ddc14e2b6p1d9bc7jsned15aa5946e3'
+    request["x-rapidapi-host"] = ''
+    request["x-rapidapi-key"] = ''
     response = http.request(request)
     puts response.read_body
 
@@ -218,8 +218,8 @@
   http.verify_mode = OpenSSL::SSL::VERIFY_NONE
   
   request = Net::HTTP::Get.new(url)
-  request["x-rapidapi-host"] = 'webknox-recipes.p.rapidapi.com'
-  request["x-rapidapi-key"] = 'db591d3d80msh022969b5bca6858p1ba582jsn871c0f13a291'
+  request["x-rapidapi-host"] = ''
+  request["x-rapidapi-key"] = ''
   
   response = http.request(request)
   puts response.read_body
