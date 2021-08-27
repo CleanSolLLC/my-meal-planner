@@ -2,7 +2,8 @@ class Api::V1::RecipesController < ApplicationController
  
   def index
   	recipes = Recipe.all
-  	render json: recipes 
+  	#render json: recipes
+    render json: RecipeSerializer.new(recipes) 
   end
 
   def create
@@ -10,14 +11,15 @@ class Api::V1::RecipesController < ApplicationController
     if recipe.save
       render json: recipe, status: :accepted
     else
-      render json: {errors: recipe.errors.full_messages}, status: :unprocessable_entity}
+      render json: {errors: recipe.errors.full_messages, status: :unprocessable_entity}
     end
+  end
 
   def show
-    recipe = Recipe.find_by(id: params[:id}])
+    recipe = Recipe.find_by(id: params[:id])
 
     if recipe.nil?
-      render json: {error: "Recipe Not Found"}, status: :unprocessable_entity}
+      render json: {error: "Recipe Not Found", status: :unprocessable_entity}
     else
       render json: recipe 
     end
@@ -25,10 +27,10 @@ class Api::V1::RecipesController < ApplicationController
   end
 
   def delete
-    recipe = Recipe.find_by(id: params[:id}])
+    recipe = Recipe.find_by(id: params[:id])
 
     if recipe.nil?
-      render json: {error: "Recipe Not Found"}, status: :unprocessable_entity}
+      render json: {error: "Recipe Not Found", status: :unprocessable_entity}
     else
       recipe.destroy
     end    
