@@ -8,10 +8,14 @@ class Api::V1::FoodQueriesController < ApplicationController
 
   def create
     food_query = FoodQuery.new(food_query_params)
-    if food_query.save
-      render json: food_query, status: :accepted
+    
+    obj = FoodQuery.check(food_query)
+    error = obj.errors.first.type if !obj.errors.empty?
+    
+    if obj.save
+      render json: obj, status: :accepted
     else
-      render json: {errors: food_query.errors.full_messages, status: :unprocessable_entity}
+      render json: {error: error}
     end
   end
 
@@ -40,6 +44,6 @@ class Api::V1::FoodQueriesController < ApplicationController
 
   private
     def food_query_params
-      require(:food_query).permit(:search, :response)
+      params.require(:food_query).permit(:search, :response)
     end	
 end

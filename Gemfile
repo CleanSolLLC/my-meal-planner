@@ -46,3 +46,5 @@ gem "dotenv-rails", "~> 2.7"
 gem "active_model_serializers", "~> 0.10.12"
 
 gem "fast_jsonapi", "~> 1.5"
+
+gem "pry", "~> 0.14.1"

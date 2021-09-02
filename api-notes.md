@@ -105,7 +105,6 @@
 
 
 ## EXAMPLE 3 RECIPE INFORMATION
-  e.g How much vitamin c is in 2 apples?
 
   //QUERY --> HTTP VERB GET
   recipe information
@@ -224,6 +223,25 @@
   response = http.request(request)
   puts response.read_body
 
+
+
+## EXAMPLE 4 OF FOOD QUERY SEARCH USING RUBY API CALL
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://webknox-recipes.p.rapidapi.com/recipes/quickAnswer?q=How%20many%20carbs%20in%20%20one%20baked%20potato")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Get.new(url)
+request["x-rapidapi-host"] = ''
+request["x-rapidapi-key"] = ''
+
+response = http.request(request)
+puts response.read_body
 
 
 
