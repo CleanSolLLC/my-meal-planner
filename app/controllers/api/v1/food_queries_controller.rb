@@ -19,24 +19,15 @@ class Api::V1::FoodQueriesController < ApplicationController
     end
   end
 
-  def show
-    food_query = FoodQuery.find_by(id: params[:id])
 
-    if food_query.nil?
-      render json: {error: "Query Not Found", status: :unprocessable_entity}
-    else
-      render json: food_query 
-    end
-
-  end
-
-  def delete
+  def destroy
     food_query = FoodQuery.find_by(id: params[:id])
 
     if food_query.nil?
       render json: {error: "Query Not Found", status: :unprocessable_entity}
     else
       food_query.destroy
+      render json: food_query
     end    
 
   end

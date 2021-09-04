@@ -6,7 +6,10 @@ Recipe.destroy_all
 
 
 
+FoodQuery.create(search: "Carbs in potato chips", response: "In a small bag of potato chips there are 20 g of carbohydrates. This amount covers 0% of your daily needs.")
 FoodQuery.create(search: "How much Vitamin C does two apples have?", response: "In two apples, there are 16.7 mg of Vitamin C. This amount covers 20.0% of your daily needs of Vitamin C.")
+FoodQuery.create(search: "Protein in pork", response: "In pork there is 20 grams of protein . This amount covers 20.0% of your daily needs of protein.")
+
 Category.create(meal: "beef", exclude: "")
 Category.create(meal: "vegan", exclude: "")
 Category.create(meal: "breakfast", exclude: "dairy")
