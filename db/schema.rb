@@ -10,25 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_24_225758) do
+ActiveRecord::Schema.define(version: 2021_08_24_223514) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string "meal"
-    t.string "exclude"
+    t.string "meal_types"
+    t.string "exclusions"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "food_categories", force: :cascade do |t|
-    t.bigint "food_id", null: false
-    t.bigint "category_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "index_food_categories_on_category_id"
-    t.index ["food_id"], name: "index_food_categories_on_food_id"
   end
 
   create_table "food_queries", force: :cascade do |t|
@@ -38,27 +29,17 @@ ActiveRecord::Schema.define(version: 2021_08_24_225758) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "foods", force: :cascade do |t|
+  create_table "recipes", force: :cascade do |t|
+    t.bigint "category_id"
     t.string "recipe_api_id"
     t.string "title"
     t.string "ready_in_minutes"
     t.string "servings"
+    t.string "source_url"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_recipes_on_category_id"
   end
 
-  create_table "recipes", force: :cascade do |t|
-    t.bigint "food_id", null: false
-    t.string "description"
-    t.string "servings"
-    t.string "ingredients"
-    t.string "directions"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["food_id"], name: "index_recipes_on_food_id"
-  end
-
-  add_foreign_key "food_categories", "categories"
-  add_foreign_key "food_categories", "foods"
-  add_foreign_key "recipes", "foods"
 end
