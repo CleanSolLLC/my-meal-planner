@@ -14,6 +14,49 @@ Category.create(meal_types: "vegan", exclusions: "")
 Category.create(meal_types: "breakfast", exclusions: "dairy nuts")
 
 
-Recipe.create(recipe_api_id: "1101225", title: "Herb Crustaed Pork Rib Roast", ready_in_minutes: "165", servings: "8", source_url: "www.mytest.com", image: "my-image.jpg", category_id: 1) 
+ Recipe.create(recipe_api_id: "93877", title: "Beef Enchiladas", ready_in_minutes: "45", servings: "6", source_url: "http://www.marthastewart.com/344471/beef-enchiladas", image: "beef-enchiladas-2-93877.png", category_id: 1) 
+
+ Recipe.create(recipe_api_id: "278914", title: "Basil Beef", ready_in_minutes: "52", servings: "6", source_url: "http://www.kraftrecipes.com/recipes/basil-beef-56551.aspx", image: "beef-enchiladas-2-93877.png", category_id: 1) 
+ 
+ Recipe.create(recipe_api_id: "93877", title: "Beef Enchiladas", ready_in_minutes: "45", servings: "6", source_url: "http://www.marthastewart.com/344471/beef-enchiladas", image: "beef-enchiladas-2-93877.png", category_id: 1) 
+
+ Recipe.create(recipe_api_id: "278914", title: "Basil Beef", ready_in_minutes: "52", servings: "6", source_url: "http://www.kraftrecipes.com/recipes/basil-beef-56551.aspx", image: "beef-enchiladas-2-93877.png", category_id: 1) 
 
 
+# //Test Data
+# // const arry = [{"id": 93877,
+# //    "title":"Beef Enchiladas",
+# //    "readyInMinutes":45,
+# //    "servings":6,
+# //    "sourceUrl":"http://www.marthastewart.com/344471/beef-enchiladas",
+# //    "openLicense":0,
+# //    "image":"beef-enchiladas-2-93877.png"
+# //    },
+   
+# //    {"id": 278914,
+# //    "title":"Basil Beef",
+# //    "readyInMinutes":52,
+# //    "servings":6,
+# //    "sourceUrl":"http://www.kraftrecipes.com/recipes/basil-beef-56551.aspx",
+# //    "openLicense":0,
+# //    "image":"basil-beef-278914.jpg"
+# //    },
+
+# //       {"id": 278914,
+# //    "title":"Basil Beef",
+# //    "readyInMinutes":52,
+# //    "servings":6,
+# //    "sourceUrl":"http://www.kraftrecipes.com/recipes/basil-beef-56551.aspx",
+# //    "openLicense":0,
+# //    "image":"basil-beef-278914.jpg"
+# //    },
+
+# //       {"id": 278914,
+# //    "title":"Basil Beef",
+# //    "readyInMinutes":52,
+# //    "servings":6,
+# //    "sourceUrl":"http://www.kraftrecipes.com/recipes/basil-beef-56551.aspx",
+# //    "openLicense":0,
+# //    "image":"basil-beef-278914.jpg"
+# //    }
+# // ]
