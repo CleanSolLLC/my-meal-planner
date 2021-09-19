@@ -246,4 +246,104 @@ puts response.read_body
 
 
 
-
+{results: Array(10), baseUri: 'https://spoonacular.com/recipeImages/', offset: 0, number: 10, totalResults: 27, …}
+baseUri: "https://spoonacular.com/recipeImages/"
+expires: 1632163763160
+number: 10
+offset: 0
+processingTimeMs: 156
+results: Array(10)
+0:
+id: 382510
+image: "Pork-Chops-with-Chimichurri-382510.jpg"
+openLicense: 0
+readyInMinutes: 25
+servings: 4
+sourceUrl: "http://www.tasteofhome.com/recipes/pork-chops-with-chimichurri"
+title: "Pork Chops with Chimichurri"
+[[Prototype]]: Object
+1:
+id: 408746
+image: "pork-tenderloin-with-chimichurri-408746.jpeg"
+openLicense: 0
+readyInMinutes: 58
+servings: 8
+sourceUrl: "http://www.foodnetwork.com/recipes/tyler-florence/pork-tenderloin-with-chimichurri-recipe.html"
+title: "Pork Tenderloin with Chimichurri"
+[[Prototype]]: Object
+2:
+id: 1017407
+image: "pork-skewers-with-chimichurri-1017407.jpg"
+openLicense: 0
+readyInMinutes: 15
+servings: 2
+sourceUrl: "https://www.tasteaholics.com/recipes/lunch-recipes/pork-skewers-with-chimichurri-recipe/"
+title: "Pork Skewers with Chimichurri"
+[[Prototype]]: Object
+3:
+id: 82010
+image: "braised-pork-shoulder-with-chimichurri-82010.jpg"
+openLicense: 0
+readyInMinutes: 195
+servings: 8
+sourceUrl: "http://www.foodandwine.com/recipes/braised-pork-shoulder-with-chimichurri"
+title: "Braised Pork Shoulder with Chimichurri"
+[[Prototype]]: Object
+4:
+id: 630966
+image: "Pork-Carne-Asada-Tacos-630966.jpg"
+openLicense: 0
+readyInMinutes: 45
+servings: 3
+sourceUrl: "http://www.ruled.me/pork-carne-asada-tacos/"
+title: "Pork Carne Asada Tacos"
+[[Prototype]]: Object
+5:
+id: 489870
+image: "Lime-Marinated-Pork-Tenderloin-with-Chimichurri-489870.jpg"
+openLicense: 0
+readyInMinutes: 60
+servings: 6
+sourceUrl: "http://dinnersdishesanddesserts.com/lime-marinated-pork-tenderloin-with-chimichurri/"
+title: "Lime-Marinated Pork Tenderloin with Chimichurri"
+[[Prototype]]: Object
+6:
+id: 607602
+image: "Bacon-Wrapped-Chimichurri-Pork-Tenderloin-607602.jpg"
+openLicense: 0
+readyInMinutes: 55
+servings: 4
+sourceUrl: "http://littleleopardbook.com/2014/07/30/bacon-wrapped-chimichurri-pork-tenderloin/"
+title: "Bacon Wrapped Chimichurri Pork Tenderloin"
+[[Prototype]]: Object
+7:
+id: 551722
+image: "Grilled-Pork-Tenderloin-with-Chimichurri-and-Summer-Veggies-551722.jpg"
+openLicense: 0
+readyInMinutes: 30
+servings: 4
+sourceUrl: "http://www.aspicyperspective.com/2010/07/charming-chimichurri.html"
+title: "Grilled Pork Tenderloin with Chimichurri and Summer Veggies"
+[[Prototype]]: Object
+8:
+id: 904189
+image: "grilled-pork-tenderloin-with-charred-lemon-chimichurri-904189.jpg"
+openLicense: 0
+readyInMinutes: 30
+servings: 4
+sourceUrl: "https://www.platingsandpairings.com/grilled-pork-tenderloin-with-charred-lemon-chimichurri/"
+title: "Grilled Pork Tenderloin with Charred Lemon Chimichurri"
+[[Prototype]]: Object
+9:
+id: 281741
+image: "slow-cooker-pork-loin-carnita-tacos-with-chimichurri-sauce-281741.jpg"
+openLicense: 0
+readyInMinutes: 499
+servings: 6
+sourceUrl: "http://www.myrecipes.com/recipe/slow-cooker-pork-loin-tacos-50400000104925/"
+title: "Slow-Cooker Pork Loin Carnita Tacos with Chimichurri Sauce"
+[[Prototype]]: Object
+length: 10
+[[Prototype]]: Array(0)
+totalResults: 27
+[[Prototype]]: Object

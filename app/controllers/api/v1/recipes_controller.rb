@@ -7,12 +7,11 @@ class Api::V1::RecipesController < ApplicationController
   end
 
   def create
-    recipe = Recipe.new(recipe_params)
-    if recipe.save
-      render json: recipe, status: :accepted
-    else
-      render json: {errors: recipe.errors.full_messages, status: :unprocessable_entity}
+    params[:results].each do |recipe_params|
+      r = recipe_params.except(:id)
+      Recipe.create(recipe_params(r))
     end
+     # render json: "success" status: :accepted
   end
 
   def show
@@ -26,20 +25,21 @@ class Api::V1::RecipesController < ApplicationController
 
   end
 
-  def delete
+  def destroy
     recipe = Recipe.find_by(id: params[:id])
 
     if recipe.nil?
       render json: {error: "Recipe Not Found", status: :unprocessable_entity}
     else
       recipe.destroy
+      render json: recipe
     end    
 
   end
 
 
   private
-    def recipe_params
-      require(:recipe).permit(:food_id, :description, :servings, :ingredients, :directions)
+    def recipe_params(r)
+      r.permit(:title, :readyInMinutes, :servings, :sourceUrl, :image, :openLicense, :category_id, category_id: [] )
     end
 end

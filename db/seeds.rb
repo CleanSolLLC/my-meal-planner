@@ -14,13 +14,13 @@ Category.create(meal_types: "vegan", exclusions: "")
 Category.create(meal_types: "breakfast", exclusions: "dairy nuts")
 
 
- Recipe.create(recipe_api_id: "93877", title: "Beef Enchiladas", ready_in_minutes: "45", servings: "6", source_url: "http://www.marthastewart.com/344471/beef-enchiladas", image: "beef-enchiladas-2-93877.png", category_id: 1) 
+ Recipe.create(title: "Beef Enchiladas", readyInMinutes: "45", servings: "6", sourceUrl: "http://www.marthastewart.com/344471/beef-enchiladas", image: "beef-enchiladas-2-93877.png", category_id: 1, openLicense: 0) 
 
- Recipe.create(recipe_api_id: "278914", title: "Basil Beef", ready_in_minutes: "52", servings: "6", source_url: "http://www.kraftrecipes.com/recipes/basil-beef-56551.aspx", image: "beef-enchiladas-2-93877.png", category_id: 1) 
+ Recipe.create(title: "Basil Beef", readyInMinutes: "52", servings: "6", sourceUrl: "http://www.kraftrecipes.com/recipes/basil-beef-56551.aspx", image: "beef-enchiladas-2-93877.png", category_id: 1, openLicense: 0) 
  
- Recipe.create(recipe_api_id: "93877", title: "Beef Enchiladas", ready_in_minutes: "45", servings: "6", source_url: "http://www.marthastewart.com/344471/beef-enchiladas", image: "beef-enchiladas-2-93877.png", category_id: 1) 
+ Recipe.create(title: "Beef Enchiladas", readyInMinutes: "45", servings: "6", sourceUrl: "http://www.marthastewart.com/344471/beef-enchiladas", image: "beef-enchiladas-2-93877.png", category_id: 1, openLicense: 0) 
 
- Recipe.create(recipe_api_id: "278914", title: "Basil Beef", ready_in_minutes: "52", servings: "6", source_url: "http://www.kraftrecipes.com/recipes/basil-beef-56551.aspx", image: "beef-enchiladas-2-93877.png", category_id: 1) 
+ Recipe.create(title: "Basil Beef", readyInMinutes: "52", servings: "6", sourceUrl: "http://www.kraftrecipes.com/recipes/basil-beef-56551.aspx", image: "beef-enchiladas-2-93877.png", category_id: 1, openLicense: 0) 
 
 
 # //Test Data
