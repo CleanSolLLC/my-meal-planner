@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do 
     namespace :v1 do 
-      resources :recipes, only: [:index, :create, s:destroy]
+      resources :recipes, only: [:index, :create, :destroy]
       resources :food_queries, only: [:index, :create, :destroy]
       resources :categories, only: [:index, :create, :destroy]
     end
