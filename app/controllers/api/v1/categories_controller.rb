@@ -2,7 +2,6 @@ class Api::V1::CategoriesController < ApplicationController
 
   def index
   	categories = Category.all
-  	#render json: categories
     render json: CategorySerializer.new(categories) 
   end
 
@@ -13,17 +12,6 @@ class Api::V1::CategoriesController < ApplicationController
     else
       render json: {errors: category.errors.full_messages, status: :unprocessable_entity}
     end
-  end
-
-  def show
-    category = Category.find_by(id: params[:id])
-
-    if category.nil?
-      render json: {error: "Category Not Found", status: :unprocessable_entity}
-    else
-      render json: category 
-    end
-
   end
 
   def delete
