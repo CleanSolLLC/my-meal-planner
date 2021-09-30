@@ -28,6 +28,6 @@ class Api::V1::CategoriesController < ApplicationController
 
   private
     def category_params
-      require(:category).permit(:meal, :exclude)
+      require(:category).permit(:type)
     end	
 end
