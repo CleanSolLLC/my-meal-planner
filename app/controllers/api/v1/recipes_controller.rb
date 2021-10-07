@@ -9,7 +9,6 @@ class Api::V1::RecipesController < ApplicationController
     params[:results].each do |recipe_params|
       r = recipe_params.except(:id)
       Recipe.create(recipe_params(r))
-      redirect_to api_v1_recipes_path
     end
     
   end
