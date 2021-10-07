@@ -8,7 +8,7 @@ class Api::V1::CategoriesController < ApplicationController
   def create
     category = Category.new(category_params)
     if category.save
-      render json: category, status: :accepted
+      redirect_to api_v1_category_path(category)
     else
       render json: {errors: category.errors.full_messages, status: :unprocessable_entity}
     end
