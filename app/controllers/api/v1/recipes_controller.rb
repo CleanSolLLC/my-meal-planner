@@ -6,11 +6,13 @@ class Api::V1::RecipesController < ApplicationController
   end
 
   def create
+    recipe_array = []
     params[:results].each do |recipe_params|
       r = recipe_params.except(:id)
-      Recipe.create(recipe_params(r))
+      recipe = Recipe.create(recipe_params(r))
+      recipe_array.push(recipe)
     end
-    
+    render json: RecipeSerializer.new(recipe_array)
   end
 
   def destroy
@@ -30,4 +32,5 @@ class Api::V1::RecipesController < ApplicationController
     def recipe_params(r)
       r.permit(:title, :readyInMinutes, :servings, :sourceUrl, :image, :openLicense, :category_id, category_id: [] )
     end
+
 end
