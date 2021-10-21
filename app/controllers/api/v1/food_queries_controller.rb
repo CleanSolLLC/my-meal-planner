@@ -10,7 +10,7 @@ class Api::V1::FoodQueriesController < ApplicationController
     food_query = FoodQuery.new(food_query_params)
     
     obj = FoodQuery.check(food_query)
-    error = obj.errors.first.type if !obj.errors.empty?
+    #error = obj.errors.first.type if !obj.errors
     
     if obj.save
       render json: obj, status: :accepted
